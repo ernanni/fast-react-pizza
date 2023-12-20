@@ -1,11 +1,17 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigation } from 'react-router-dom';
 
 import Header from './Header';
 import { CartOverview } from '../features/cart';
+import Loading from './Loading';
 
 function AppLayout() {
+  const navigation = useNavigation();
+  const isLoading = navigation.state === 'loading';
+
   return (
-    <>
+    <div className="layout">
+      {isLoading && <Loading />}
+
       <Header />
 
       <main>
@@ -13,7 +19,7 @@ function AppLayout() {
       </main>
 
       <CartOverview />
-    </>
+    </div>
   );
 }
 
