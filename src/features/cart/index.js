@@ -1,6 +1,7 @@
-import Cart from './Cart';
-import CartItem from './CartItem';
-import CartOverview from './CartOverview';
-import EmptyCart from './EmptyCart';
+import Cart from "./Cart";
+import CartItem from "./CartItem";
+import CartOverview from "./CartOverview";
+import EmptyCart from "./EmptyCart";
+import UpdateItemQuantity from "./UpdateItemQuantity";
 
-export { Cart, CartItem, CartOverview, EmptyCart };
+export { Cart, CartItem, CartOverview, EmptyCart, UpdateItemQuantity };
